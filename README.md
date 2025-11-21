@@ -61,6 +61,26 @@ The logic for connecting Java to MySQL is isolated in `src/com/DBConnection.java
     * `jdbc:mysql://`: The protocol.
     * `localhost:3306`: The server host and port.
     * `employeeDB`: The specific database name.
+  
+    * 
+## 📂 Project Structure
+
+```text
+EmployeeApp
+├── .idea/                      # IDE configuration files
+├── out/                        # Compiled .class files
+│   └── production/
+│       └── EmployeeApp/
+│           └── com/
+├── src/                        # Source code directory
+│   └── com/
+│       ├── DBConnection.java       # Handles MySQL Connection logic
+│       ├── Employee.java           # POJO class (Model)
+│       ├── EmployeeDaoImp.java     # Implementation of DB operations (DAO Layer)
+│       ├── EmployeeDaoInterface.java # Abstract interface for operations
+│       └── Main.java               # Entry point (Menu and User Input)
+└── EmployeeApp.iml             # Module file
+
 
 **Key Code Snippet:**
 ```java
@@ -79,3 +99,4 @@ public static Connection createDBConnection() {
     }
     return con;
 }
+'''
